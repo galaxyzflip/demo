@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: local
+
+  application:
+    name: demo
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb
+    username: pigcs
+    password: 1234
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+  sql:
+    init:
+      mode: always  # 애플리케이션이 시작될 때 쿼리 실행을 허용
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+#logging:
+#  level:
+#    root:
